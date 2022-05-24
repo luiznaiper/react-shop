@@ -1,7 +1,7 @@
-const { plugins } = require('@babel/preset-env/lib/plugins-compat-data');
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+//const { plugins } = require('@babel/preset-env/lib/plugins-compat-data')
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
     entry: './src/index.js',
@@ -49,4 +49,8 @@ module.exports = {
 			filename: '[name].css'
 		}),
     ],
+    devServer:{
+        static: path.join(__dirname, 'dist'),
+        port: 3005,
+    }
 }
