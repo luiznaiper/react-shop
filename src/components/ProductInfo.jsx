@@ -1,7 +1,6 @@
 import React from "react";
 import "@styles/ProductInfo.scss";
-
-const iconCart = "@icons/bt_add_to_cart.svg";
+import iconCart from "@icons/bt_add_to_cart.svg";
 
 const ProductInfo = () => {
   return (
@@ -26,4 +25,4 @@ const ProductInfo = () => {
   );
 };
 
-export default ProductInfo;
+export { ProductInfo };

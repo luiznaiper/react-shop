@@ -19,49 +19,41 @@ module.exports = {
             '@routes': path.resolve(__dirname, 'src/routes/' ),
             '@styles': path.resolve(__dirname, 'src/styles/' ),
             '@icons': path.resolve(__dirname, 'src/assets/icons/' ),
-            '@logos': path.resolve(__dirname, 'src/assets/logos/' ),
+            '@logos': path.resolve(__dirname, 'src/assets/logos/'),
         }
     },
     mode: 'development',
     module: {
-        rules: [
-            {
-                test:/.(js|jsx)$/,
-                exclude: /node_modules/,
-                use: {
-                    loader: 'babel-loader'
-                }
-            },
-            {
-                test: /\.html$/,
-                use: [
-                    {
-                        loader: 'html-loader'
-                    }
-                ]
-            },
-            {
-				test: /\.s?[ca]ss$/,
+		rules: [
+			{
+				test: /\.(js|jsx)$/,
+				exclude: /node_modules/,
+				use: {
+					loader: 'babel-loader'
+				}
+			},
+			{
+				test: /\.html$/,
+				use: [
+					{
+						loader: 'html-loader'
+					}
+				]
+			},
+			{
+				test: /\.(css|scss)$/,
 				use: [
 					"style-loader",
 					"css-loader",
 					"sass-loader",
 				],
 			},
-            {
-                test: /\.(png|jp(e*)g|svg|gif)$/,
-                type: 'asset',
-                      use: [
-                         {
-                        loader: 'file-loader',
-                           options: {
-                                 name: 'images/[hash]-[name].[ext]',
-                               },
-                         },
-                         ],
-               },
-        ]
-    },
+			{
+				test: /\.(png|svg|jpg|gif)$/,
+				type: 'asset'
+			}
+		]
+	},
     plugins: [
         new HtmlWebpackPlugin({
             template: './public/index.html',
