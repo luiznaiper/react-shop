@@ -1,8 +1,9 @@
 import React from "react";
-import logo from "../../public/assets/logos/logo_yard_sale.svg";
-import menuIcon from "../../public/assets/icons/icon_menu.svg";
-import shoppingIcon from "../../public/assets/icons/icon_shopping_cart.svg";
-import "../styles/Header.scss";
+import "@styles/Header.scss";
+
+const logo = "@logos/logo_yard_sale.svg";
+const menuIcon = "@icons/icon_menu.svg";
+const shoppingIcon = "@icons/icon_shopping_cart.svg";
 
 const Header = () => {
   return (

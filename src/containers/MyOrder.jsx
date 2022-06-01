@@ -1,7 +1,8 @@
 import React from "react";
-import OrderItem from "../components/OrderItem";
-import arrowIcon from "../../public/assets/icons/arrow.svg";
-import "../styles/MyOrder.scss";
+import OrderItem from "@components/OrderItem";
+import "@styles/MyOrder.scss";
+
+const arrowIcon = "@icons/arrow.svg";
 
 const MyOrder = () => {
   return (

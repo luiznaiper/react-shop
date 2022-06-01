@@ -1,6 +1,7 @@
 import React from "react";
-import logo from "../../public/assets/logos/logo_yard_sale.svg";
-import "../styles/Login.scss";
+import "@styles/Login.scss";
+
+const logo = "@logos/logo_yard_sale.svg";
 
 const Login = () => {
   return (

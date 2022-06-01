@@ -1,6 +1,7 @@
 import React from "react";
-import arrowIcon from "../../public/assets/icons/arrow.svg";
-import "../styles/Order.scss";
+import "@styles/Order.scss";
+
+const arrowIcon = "@icons/arrow.svg";
 
 const Order = () => {
   return (
