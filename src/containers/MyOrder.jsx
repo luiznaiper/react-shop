@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { OrderItem } from "@components/OrderItem";
-import { AppContext } from "../context/AppContext";
+import { AppContext } from "@context/AppContext";
 import "@styles/MyOrder.scss";
 import arrowIcon from "@icons/arrow.svg";
 
@@ -18,8 +18,8 @@ const MyOrder = () => {
         <p className="title">My order</p>
       </div>
       <div className="my-order-content">
-        {state.cart.map((product) => (
-          <OrderItem product={product} key={`orderItem-${product.id}`} />
+        {state.cart.map((product, index) => (
+          <OrderItem indexValue={index} product={product} key={index} />
         ))}
         <div className="order">
           <p>
