@@ -59,3 +59,6 @@ typings/
 
 # next.js build output
 .next
+
+# horrible DS Store
+.DS_Store
